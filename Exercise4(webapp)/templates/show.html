@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <hr>
+    <h1>original image</h1>
+    <div><img src="{{ result.user_input }}" class="img-rounded" width="{{ result.size }}" height="auto"></div>
+    <h1>predicted image</h1>
+    <div><img src="{{ result.path_to_image }}" class="img-rounded" width="{{ result.size }}" height="auto"></div>
+    <hr>
+    <a href = "{{ url_for('upload_file') }}" class="btn btn-default">Go Back</a>
+</div>
+{% endblock %}
